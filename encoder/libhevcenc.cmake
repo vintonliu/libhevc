@@ -138,3 +138,5 @@ add_library(libhevcenc STATIC ${LIBHEVC_COMMON_SRCS} ${LIBHEVC_COMMON_ASMS}
 
 target_compile_definitions(libhevcenc PRIVATE N_MB_ENABLE
                                               ENABLE_MAIN_REXT_PROFILE)
+install(TARGETS libhevcenc DESTINATION lib)                              
+install(DIRECTORY ${HEVC_ROOT}/encoder DESTINATION include/libhevc FILES_MATCHING PATTERN "*.h")

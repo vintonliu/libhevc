@@ -78,3 +78,6 @@ endif()
 
 add_library(libhevcdec STATIC ${LIBHEVC_COMMON_SRCS} ${LIBHEVC_COMMON_ASMS}
                               ${LIBHEVCDEC_ASMS} ${LIBHEVCDEC_SRCS})
+
+install(TARGETS libhevcdec DESTINATION lib)                              
+install(DIRECTORY ${HEVC_ROOT}/decoder DESTINATION include/libhevc FILES_MATCHING PATTERN "*.h")
